@@ -13,27 +13,28 @@ public class SignUpPage {
 		 By SignUpButton = By.xpath("//*[text()='Signup']");
 		By errormsg = By.xpath("//*[text()='Email Address already exist!']");
 		
-		 public void Dashboard(WebDriver driver) {
+		 public void dashboard(WebDriver driver) {
 				this.driver=driver;
 			}
-		 public void clickSignup() {
+		 public void clicksignup() {
 				driver.findElement(signup).click();
 				}
-		 public boolean SignupIsDisplayed() {
+		 public boolean signupisdisplayed() {
 				return driver.findElement(signup).isDisplayed();
 			}
 		 
-		 public void enterUsername(String user) {
+		 public void enterusername(String user) {
 				driver.findElement(uName).sendKeys(user);
 			}
-		 public void enterEmail(String pass) {
+		 public void enteremail(String pass) {
 				driver.findElement(Email).sendKeys(pass);
 			}
-		 public void clickSignupButton() {
+		 public void clicksignupButton() {
 				driver.findElement(SignUpButton).click();
 			}
-		 public String ErrorMsg() {
+		 public String errormsg() {
 				return driver.findElement(errormsg).getText();
 			}
+		
 	}
 		

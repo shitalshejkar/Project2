@@ -13,13 +13,13 @@ public class TC_21_AddReview {
 	By submit = By.xpath("//*[@id='button-review']");
 	By successmsg = By.xpath("//*[contains(text(),'Thank you')]");
 	
-	public void Dashboard(WebDriver driver) {
+	public void dashboard(WebDriver driver) {
 		this.driver=driver;
 	}
 	public boolean writeReview() {
 		 return driver.findElement(writeReview).isDisplayed();
 		 }
-	 public void Name(String name) {
+	 public void name(String name) {
 		 driver.findElement(Name).sendKeys(name);
 		 }
 	
@@ -27,7 +27,7 @@ public class TC_21_AddReview {
 		 driver.findElement(email).sendKeys(Email);
 		 }
 	 
-	 public void Addreviewhere(String addreviewhere) {
+	 public void addreviewhere(String addreviewhere) {
 		 driver.findElement(Addreviewhere).sendKeys(addreviewhere);
 		 }
 	 

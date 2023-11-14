@@ -32,42 +32,42 @@ public class TC_14_PlaceOrder {
 	 By EmptyCart = By.xpath("//*[@id='empty_cart']");
 	 
 	 
-	 public void Dashboard(WebDriver driver) {
+	 public void dashboard(WebDriver driver) {
 		this.driver=driver;
 	      }
-	 public void CickProduct() {
+	 public void clickProduct() {
 		driver.findElement(Products).click();
 		}
 	 
 			
-	 public WebElement AddtoCart1() {
+	 public WebElement addtoCart1() {
 			return driver.findElement(AddtoCart1);
 			}
-	 public void ClickAddtoCart() {
+	 public void clickAddtoCart() {
 			driver.findElement(AddtoCart).click();
 			}
-	 public void ViewCart() {
+	 public void viewCart() {
 			driver.findElement(ViewCart).click();
 			}
-	 public void ProceedToCart() {
+	 public void proceedToCart() {
 			driver.findElement(ProceedToCart).click();
 			}
-	 public void Register_Login() {
+	 public void register_Login() {
 			driver.findElement(Register_Login).click();
 			}
 	 public void cart() {
 			driver.findElement(cart).click();
 			}
-	 public String DeliveryAdd() {
+	 public String deliveryAdd() {
 			return driver.findElement(DeliveryAdd).getText();
 			}
-	 public String BillingAdd() {
+	 public String billingAdd() {
 			return driver.findElement(BillingAdd).getText();
 			}
-	 public String CartInfo() {
+	 public String cartInfo() {
 			return driver.findElement(CartInfo).getText();
 			}
-	 public void Comment(String msg) {
+	 public void comment(String msg) {
 			driver.findElement(Comment).sendKeys(msg);
 			}
 	 public void placeOrder() {
@@ -88,7 +88,7 @@ public class TC_14_PlaceOrder {
 	 public void expiry_year(String Expyr) {
 			driver.findElement(expiry_year).sendKeys(Expyr);
 			}
-	 public void Pay_submit() {
+	 public void pay_submit() {
 			driver.findElement(Pay_submit).click();
 			}
 	 public String successMsg() {
@@ -100,14 +100,15 @@ public class TC_14_PlaceOrder {
 	 public String deleteConfirm() {
 			return driver.findElement(deleteConfirm).getText();
 			}
-	 public void Continue() {
+	 public void continued() {
 			driver.findElement(Continue).click();
 			}
-	 public void Removeproduct() {
+	 public void removeproduct() {
 				driver.findElement(Removeproduct).click();
 				} 
-	 public String EmptyCart() {
+	 public String emptyCart() {
 			return driver.findElement(EmptyCart).getText();
 			}
+	
 	 
 }

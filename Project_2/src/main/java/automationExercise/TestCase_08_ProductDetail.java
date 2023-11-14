@@ -32,18 +32,18 @@ public class TestCase_08_ProductDetail {
 		System.out.println("home page is visible successfully\n");
 	}
 	@Test(priority = 0)
-	public void  ProductDetails() throws Exception {
+	public void  productDetails() throws Exception {
 		
 		TC_08_ProductDetailPage pd=new TC_08_ProductDetailPage();
-		pd.Dashboard(driver);
-		pd.ClickProduct();
+		pd.dashboard(driver);;
+		pd.clickProduct();
 		
 		String hp= driver.getCurrentUrl();
 		String expUrl="https://automationexercise.com/products";
 		Assert.assertEquals(hp, expUrl,"[**user is not navigated to ALL PRODUCTS page**]");
 		System.out.println("user is navigated to ALL PRODUCTS page successfully\n");
 		
-		pd.ClickViewProduct();
+		pd.clickViewProduct();
 		
 		String vp= driver.getCurrentUrl();
 		String expUrl1="https://automationexercise.com/product_details/2";
@@ -54,17 +54,17 @@ public class TestCase_08_ProductDetail {
 		Assert.assertEquals(category,true,"[**Category of Product is not visible**]");
 		System.out.println("Category of Product is visible");
 		
-		boolean Price= pd.PriceIsDisplayed();
+		boolean Price= pd.priceIsDisplayed();
 		Assert.assertEquals(Price,true,"[**Price of Product is not visible**]");
 		System.out.println("Price of Product is visible");
 		
-		boolean Aval = pd.AvalIsDisplayed();
+		boolean Aval = pd.avalIsDisplayed();
 		Assert.assertEquals(Aval,true,"[**Availability of Product is not visible**]");
 		
-		boolean cond = pd.CondIsDisplayed();
+		boolean cond = pd.condIsDisplayed();
 		Assert.assertEquals(cond,true,"[**Condition of Product is not visible**]");
 		
-		boolean brand = pd.BrandIsDisplayed();
+		boolean brand = pd.brandIsDisplayed();
 		Assert.assertEquals(brand,true,"[**Price of Product is not visible**]");
 		}
 	

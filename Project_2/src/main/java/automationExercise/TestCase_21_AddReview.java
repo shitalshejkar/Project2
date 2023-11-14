@@ -37,11 +37,11 @@ public class TestCase_21_AddReview {
 	}
 	
 	@Test(priority = 0)
-	public void ProductReview() throws Exception {
+	public void productReview() throws Exception {
 		
 		TC_08_ProductDetailPage pd = new TC_08_ProductDetailPage();
-		pd.Dashboard(driver);
-		pd.ClickProduct();
+		pd.dashboard(driver);
+		pd.clickProduct();
 
 		String hp = driver.getCurrentUrl();
 		String expUrl = "https://automationexercise.com/products";
@@ -51,7 +51,7 @@ public class TestCase_21_AddReview {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement p1 = pd.mousehoverViewProduct();
 		js.executeScript("arguments[0].scrollIntoView();", p1);
-		pd.ClickViewProduct();
+		pd.clickViewProduct();
 
 		String vp = driver.getCurrentUrl();
 		String expUrl1 = "https://automationexercise.com/product_details/2";
@@ -60,14 +60,14 @@ public class TestCase_21_AddReview {
 
 		TC_21_AddReview Ar = new TC_21_AddReview();
 
-		Ar.Dashboard(driver);
+		Ar.dashboard(driver);
 		boolean wr = Ar.writeReview();
 		Assert.assertEquals(wr, true, "[** 'Write Your Review' is not visible**]");
 		System.out.println("'Write Your Review' is visible\n");
 
-		Ar.Name("Aparna");
+		Ar.name("Aparna");
 		Ar.email("Aparnakota09@gmail.com");
-		Ar.Addreviewhere("Very Good Product");
+		Ar.addreviewhere("Very Good Product");
 		Ar.submit();
 
 		String str = Ar.successmsg();

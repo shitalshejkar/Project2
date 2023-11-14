@@ -12,16 +12,16 @@ public class TC_25_26 {
 	
 	
 	
-	public void Dashboard(WebDriver driver) {
+	public void dashboard(WebDriver driver) {
 		this.driver=driver;
 	}
  public void scrollUp() {
 		 driver.findElement(scrollUp).click();
 		 }
- public WebElement  ScrooledupIntoView() {
+ public WebElement  scrolledupIntoView() {
 	 return driver.findElement(Scrooledup);
 	 }
- public String  Scrooledup() {
+ public String  scrolledup() {
 	 return driver.findElement(Scrooledup).getText();
 	 }
 }

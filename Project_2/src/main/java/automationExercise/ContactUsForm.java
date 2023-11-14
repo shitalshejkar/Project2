@@ -32,28 +32,28 @@ public class ContactUsForm {
 		System.out.println("home page is visible successfully\n");
 	}
 	@Test(priority = 0)
-	public void SignIN() throws Exception {
+	public void signin() throws Exception {
 	
 		ContactUsPage cu = new ContactUsPage();
-		cu.Dashboard(driver);
-		cu.ClickContactUs();
+		cu.dashboard(driver);;
+		cu.clickContactUs();
 		
-		boolean git = cu.GetInTouch();
+		boolean git = cu.getintouch();
 		Assert.assertEquals(git, true, "'GET IN TOUCH' is not visible");
 		System.out.println("'GET IN TOUCH' is visible");
 		
-		cu.Entername("Aparna");
-		cu.EnterEmail("Aparnakota9@gmail.com");
-		cu.Enatersubject("Subjectxyz");
-		cu.EnterMsg("Message_ABCDx");
-		cu.ClickChooseFile("C:\\Users\\my lap\\Pictures\\ap_dp.PNG");
-		cu.ClickSubmit();
+		cu.entername("Aparna");
+		cu.enteremail("Aparnakota9@gmail.com");
+		cu.enatersubject("Subjectxyz");
+		cu.entermsg("Message_ABCDx");
+		cu.clickchoosefile("C:\\Users\\my lap\\Pictures\\ap_dp.PNG");
+		cu.clicksubmit();
 		
 		driver.switchTo().alert().accept();
-		String str = cu.ElertSatus();
+		String str = cu.elertsatus();
 		System.out.println(str);
 		
-		cu.ClickHome();
+		cu.elickhome();
 		
 		String hp = driver.getCurrentUrl();
 		String expUrl = "https://automationexercise.com/";

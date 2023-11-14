@@ -18,40 +18,40 @@ public class ContactUsPage {
 	 //By  = By.xpath("");
 	 
 	 
-	  public void Dashboard(WebDriver driver) {
+	  public void dashboard(WebDriver driver) {
 			this.driver=driver;
 		}
-		 public void ClickContactUs() {
+		 public void clickContactUs() {
 			driver.findElement(contactUs).click();
 			}
-	  public boolean GetInTouch() {
+	  public boolean getintouch() {
 			return driver.findElement(GetInTouch).isDisplayed();
 			}
-	  public void Entername(String Name) {
+	  public void entername(String Name) {
 			driver.findElement(name).sendKeys(Name);
 			}
-	  public void EnterEmail(String Email) {
+	  public void enteremail(String Email) {
 			driver.findElement(email).sendKeys(Email);
 			}
-	  public void Enatersubject(String Sub) {
+	  public void enatersubject(String Sub) {
 			driver.findElement(subject).sendKeys(Sub);
 			}
-	  public void EnterMsg(String Msg) {
+	  public void entermsg(String Msg) {
 			driver.findElement(messsage).sendKeys(Msg);
 			}
-	  public void ClickChooseFile(String file) {
+	  public void clickchoosefile(String file) {
 			driver.findElement(chooseFile).sendKeys(file);;
 			}
-	  public void ClickSubmit() {
+	  public void clicksubmit() {
 			driver.findElement(submit).click();
 			}
-	  public String ElertSatus() {
+	  public String elertsatus() {
 			return driver.findElement(StatusAlert).getText();
 			}
-	  public void ClickHome() {
+	  public void elickhome() {
 			driver.findElement(HomeButton).click();
 			}
-	 // public void () {
-			//driver.findElement()
-			//}
-}
+	 
+	
+	}
+

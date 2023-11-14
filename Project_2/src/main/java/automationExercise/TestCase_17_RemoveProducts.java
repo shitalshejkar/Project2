@@ -39,14 +39,14 @@ public class TestCase_17_RemoveProducts {
 	
 
 	@Test(priority = 1)
-	public void Product() throws Exception {
+	public void product() throws Exception {
 
 		TC_14_PlaceOrder po = new TC_14_PlaceOrder();
-		po.Dashboard(driver);
-		po.CickProduct();
+		po.dashboard(driver);
+		po.clickProduct();
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement p1 = po.AddtoCart1();
+		WebElement p1 = po.addtoCart1();
 		js.executeScript("arguments[0].scrollIntoView();", p1);
 
 		Actions act = new Actions(driver);
@@ -57,15 +57,15 @@ public class TestCase_17_RemoveProducts {
 		Assert.assertEquals(hp, expUrl, "[**user is not navigated to ALL PRODUCTS page**]");
 		System.out.println("user is navigated to ALL PRODUCTS page successfully\n");
 
-		po.ClickAddtoCart();
-		po.ViewCart();
+		po.clickAddtoCart();
+		po.viewCart();
 		String AD = driver.getCurrentUrl();
 		String expUrl2 = "https://automationexercise.com/view_cart";
 		Assert.assertEquals(AD, expUrl2, "[** cart page is not displayed **]");
 		System.out.println("cart page is displayed");
 
-		po.Removeproduct();
-		String ec = po.EmptyCart();
+		po.removeproduct();
+		String ec = po.emptyCart();
 		System.out.println(ec);
 
 	}

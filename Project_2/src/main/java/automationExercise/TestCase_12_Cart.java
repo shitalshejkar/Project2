@@ -38,11 +38,11 @@ public class TestCase_12_Cart {
 	}
 
 	@Test(priority = 0)
-	public void Product() throws Exception {
+	public void product() throws Exception {
 		
 		TC_12_Cartpage AI= new TC_12_Cartpage();
-		AI.Dashboard(driver);
-		AI.CickProduct();
+		AI.dashboard(driver);
+		AI.clickProduct();
 		
 		Actions act = new Actions(driver);
 		
@@ -52,8 +52,8 @@ public class TestCase_12_Cart {
 		String Prod1= AI.bluetop();
 		System.out.println(Prod1);
 		
-		AI.AddtoCart();
-		AI.Continue();
+		AI.addtoCart();
+		AI.continued();
 		
 		WebElement p2=AI.menTshirt1();
 		act.moveToElement(p2).perform();
@@ -61,10 +61,10 @@ public class TestCase_12_Cart {
 		String Prod2= AI.bluetop();
 		System.out.println(Prod2);
 		
-		AI.AddtoCart2();
+		AI.addtoCart2();
 		AI.viewCart();
-		String prodOfCart1=AI.Product1();
-		String prodOfCart2=AI.Product2();
+		String prodOfCart1=AI.product1();
+		String prodOfCart2=AI.product2();
 		
 		Assert.assertEquals(Prod1, prodOfCart1, "required product not added");
 		Assert.assertEquals(Prod2, prodOfCart2,"required product not added");
@@ -73,10 +73,10 @@ public class TestCase_12_Cart {
 	}	
 	
 @Test(priority = 1)
-		public void ProductDetail() throws Exception {	
+		public void productDetail() throws Exception {	
 
 			TC_12_Cartpage Ai = new TC_12_Cartpage();
-			Ai.Dashboard(driver);
+			Ai.dashboard(driver);
 
 			driver.findElement(By.xpath("(//*[text()='View Product'])[1]")).click();
 			String hp = driver.getCurrentUrl();
@@ -85,7 +85,7 @@ public class TestCase_12_Cart {
 			System.out.println("product detail is opened successfully\n");
 
 			for (int i = 1; i < 4; i++) {
-				WebElement qa = Ai.ProdQuantity();
+				WebElement qa = Ai.prodQuantity();
 				qa.sendKeys(Keys.ARROW_UP);
 			}
 			

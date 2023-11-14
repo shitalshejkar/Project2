@@ -37,7 +37,7 @@ public class TestCase_22_AddToCart {
 
 	@Test(priority = 0)
 
-	public void AddtoCart() throws Exception {
+	public void addtoCart() throws Exception {
 
 		boolean we = driver.findElement(By.xpath("//*[text()='recommended items']")).isDisplayed();
 		Assert.assertEquals(we, true, "'RECOMMENDED ITEMS' are not visible");

@@ -20,19 +20,19 @@ public class TC_12_Cartpage {
 	By Quantity = By.xpath("//*[@id='quantity']");		 
 		 
 			 
-	  public void Dashboard(WebDriver driver) {
+	  public void dashboard(WebDriver driver) {
 			this.driver=driver;
 		}
-		 public void CickProduct() {
+		 public void clickProduct() {
 			driver.findElement(Products).click();
 			}
-		 public void AddtoCart() {
+		 public void addtoCart() {
 				driver.findElement(AddtoCart).click();
 				}
-		 public void Continue() {
+		 public void continued() {
 				driver.findElement(Continue).click();
 				}
-		 public void AddtoCart2() {
+		 public void addtoCart2() {
 				driver.findElement(AddtoCart2).click();
 				}
 		 public void viewCart() {
@@ -51,14 +51,15 @@ public class TC_12_Cartpage {
 		 public WebElement menTshirt1() {
 				return driver.findElement(menTshirt);
 				}
-		 public String Product1() {
+		 public String product1() {
 				return driver.findElement(product_1).getText();
 				}
-		 public String Product2() {
+		 public String product2() {
 				return driver.findElement(product_2).getText();
 				}
-		 public  WebElement ProdQuantity(){
+		 public  WebElement prodQuantity(){
 		 return driver.findElement(Quantity);
 				}
+		
 		 
 }

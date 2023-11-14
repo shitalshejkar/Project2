@@ -38,37 +38,37 @@ public class TestCase_16_PlaceOrder_LoginBc {
 	}
 
 	@Test(priority = 1)
-	public void Login() throws Exception {
+	public void login() throws Exception {
 
 		UserLogin obj1 = new UserLogin();
-		obj1.Dashboard(driver);
+		obj1.dashboard(driver);
 
 		obj1.clickSignup();
-		boolean Login = obj1.LoginActIsDisplayed();
+		boolean Login = obj1.loginActIsDisplayed();
 		Assert.assertEquals(Login, true, "'Login to your account' is not visible");
 		System.out.println("'Login to your account' is visible");
 
-		obj1.EnterEmailId("Aparnakota90@gmail.com");
-		obj1.EnterPasswd1("Aparnakota9");
-		obj1.ClickOnLogin();
+		obj1.enterEmailId("Aparnakota90@gmail.com");
+		obj1.enterPasswd1("Aparnakota9");
+		obj1.clickOnLogin();
 
-		boolean LU = obj1.LogedInAsUserIsDisplayed();
+		boolean LU = obj1.logedInAsUserIsDisplayed();
 		Assert.assertEquals(LU, true, "[**'Logged in as username' is not visible**]");
 		System.out.println("'Logged in as username'is visible\n");
 
-		String str = obj1.LogedInAsUser();
+		String str = obj1.logedInAsUser();
 		System.out.println(str);
 	}
 
 	@Test(priority = 1)
-	public void Product() throws Exception {
+	public void product() throws Exception {
 
 		TC_14_PlaceOrder po = new TC_14_PlaceOrder();
-		po.Dashboard(driver);
-		po.CickProduct();
+		po.dashboard(driver);
+		po.clickProduct();
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement p1 = po.AddtoCart1();
+		WebElement p1 = po.addtoCart1();
 		js.executeScript("arguments[0].scrollIntoView();", p1);
 
 		Actions act = new Actions(driver);
@@ -79,31 +79,31 @@ public class TestCase_16_PlaceOrder_LoginBc {
 		Assert.assertEquals(hp, expUrl, "[**user is not navigated to ALL PRODUCTS page**]");
 		System.out.println("user is navigated to ALL PRODUCTS page successfully\n");
 
-		po.ClickAddtoCart();
-		po.ViewCart();
+		po.clickAddtoCart();
+		po.viewCart();
 		String AD = driver.getCurrentUrl();
 		String expUrl2 = "https://automationexercise.com/view_cart";
 		Assert.assertEquals(AD, expUrl2, "[** cart page is not displayed **]");
 		System.out.println("cart page is displayed");
 
-		po.ProceedToCart();
+		po.proceedToCart();
 
 	}
 
 	@Test(priority = 4)
-	public void Cart() throws Exception {
+	public void cart() throws Exception {
 
 		TC_14_PlaceOrder po = new TC_14_PlaceOrder();
-		po.Dashboard(driver);
+		po.dashboard(driver);
 
-		String BillingAdd = po.BillingAdd();
+		String BillingAdd = po.billingAdd();
 		System.out.println(BillingAdd);
-		String DeliveryAdd = po.DeliveryAdd();
+		String DeliveryAdd = po.deliveryAdd();
 		System.out.println(DeliveryAdd);
 
-		String CartInfo = po.CartInfo();
+		String CartInfo = po.cartInfo();
 		System.out.println(CartInfo);
-		po.Comment("xyzproduct");
+		po.comment("xyzproduct");
 		po.placeOrder();
 
 		po.nameOncard("Aparna");
@@ -111,7 +111,7 @@ public class TestCase_16_PlaceOrder_LoginBc {
 		po.cvc("311");
 		po.expiry_month("09");
 		po.expiry_year("2027");
-		po.Pay_submit();
+		po.pay_submit();
 		
 		String successMsg = po.successMsg();
 		System.out.println(successMsg);
@@ -124,7 +124,7 @@ public class TestCase_16_PlaceOrder_LoginBc {
 		System.out.println(" 'ACCOUNT DELETED!' is visible\n");
 		System.out.println("Your account has been permanently deleted!");
 		
-		po.Continue();
+		po.continued();
 	}
 
 	@AfterMethod

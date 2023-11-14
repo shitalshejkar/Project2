@@ -39,10 +39,10 @@ public class TestCase_20_SearchProducts {
 	}
 	
 	@Test(priority = 0)
-	public void ProductDetails() throws Exception {
+	public void productDetails() throws Exception {
 		TC_08_ProductDetailPage pd = new TC_08_ProductDetailPage();
-		pd.Dashboard(driver);
-		pd.ClickProduct();
+		pd.dashboard(driver);
+		pd.clickProduct();
 
 		String hp = driver.getCurrentUrl();
 		String expUrl = "https://automationexercise.com/products";
@@ -50,10 +50,10 @@ public class TestCase_20_SearchProducts {
 		System.out.println("user is navigated to ALL PRODUCTS page successfully\n");
 
 		TC_20_SearchProduct se = new TC_20_SearchProduct();
-		se.Dashboard(driver);
+		se.dashboard(driver);
 		
 		se.search("Colour Blocked Shirt – Sky Blue");
-		se.Searchbutton();
+		se.searchbutton();
 		
 		String str = se.searchResult();
 		
@@ -66,19 +66,19 @@ public class TestCase_20_SearchProducts {
 		}
 
 		TC_14_PlaceOrder po = new TC_14_PlaceOrder();
-		po.Dashboard(driver);
+		po.dashboard(driver);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement p1 = po.AddtoCart1();
+		WebElement p1 = po.addtoCart1();
 		js.executeScript("arguments[0].scrollIntoView();", p1);
 
 		Actions act = new Actions(driver);
 		act.moveToElement(p1).perform();
 
-		po.ClickAddtoCart();
-		po.ViewCart();
+		po.clickAddtoCart();
+		po.viewCart();
 
-		String str1 = se.Cartdiscription();
+		String str1 = se.cartdiscription();
 		
 		if (str1.contains("Colour Blocked Shirt – Sky Blue")) {
 			System.out.println(str1);

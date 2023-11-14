@@ -35,11 +35,11 @@ public class TestCase_19_ViewBrand {
 	}
 
 	@Test(priority = 1)
-	public void Product() throws Exception {
+	public void product() throws Exception {
 
 		TC_14_PlaceOrder po = new TC_14_PlaceOrder();
-		po.Dashboard(driver);
-		po.CickProduct();
+		po.dashboard(driver);
+		po.clickProduct();
 
 		Brandpage br = new Brandpage();
 

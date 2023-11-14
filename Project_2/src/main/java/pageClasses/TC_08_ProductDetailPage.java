@@ -21,58 +21,59 @@ public class TC_08_ProductDetailPage {
 	 By Sucess_msg = By.xpath("//*[contains(text(),'You have')]");
 	 By cart = By.xpath("//*[text()=' Cart']");
 	 
-	 public void Dashboard(WebDriver driver) {
+	 public void dashboard(WebDriver driver) {
 			this.driver=driver;
 		}
-		 public void ClickProduct() {
+		 public void clickProduct() {
 			driver.findElement(Product).click();;
 			}
 		 
-		 public WebElement ViewProduct() {
+		 public WebElement viewProduct() {
 				return driver.findElement(ViewProduct);
 				}
 		 public WebElement mousehoverViewProduct() {
 			 return driver.findElement(ViewProduct);
 			}
-		 public void ClickViewProduct() {
+		 public void clickViewProduct() {
 				 driver.findElement(ViewProduct).click();;
 				}
 		 public boolean categoryIsDisplayed() {
 				return driver.findElement(category).isDisplayed();
 				}
-		 public boolean PriceIsDisplayed() {
+		 public boolean priceIsDisplayed() {
 				return driver.findElement(Price).isDisplayed();
 				}
-		 public boolean AvalIsDisplayed() {
+		 public boolean avalIsDisplayed() {
 				return driver.findElement(Aval).isDisplayed();
 				}
-		 public boolean CondIsDisplayed() {
+		 public boolean condIsDisplayed() {
 				return driver.findElement(Cond).isDisplayed();
 				}
-		 public boolean BrandIsDisplayed() {
+		 public boolean brandIsDisplayed() {
 				return driver.findElement(Brand).isDisplayed();
 				}
-		 public void SearchProduct(String Prod) {
+		 public void searchProduct(String Prod) {
 				driver.findElement(Search).sendKeys(Prod);
 		 }
-		public WebElement Subscription() {
+		public WebElement subscription() {
 	           return driver.findElement(subscription);
 					}
-		public boolean Sub() {
+		public boolean sub() {
 			return driver.findElement(subscription).isDisplayed();
 			}
-		public void EnterSubEmail(String em) {
+		public void enterSubEmail(String em) {
 			driver.findElement(sub_email).sendKeys(em);
 	 }
-		public void ClickSubArrow() {
+		public void clickSubArrow() {
 			driver.findElement(arow_sub).click();
 			}
-		public String SuccessMessg() {
+		public String successMessg() {
 			return driver.findElement(Sucess_msg).getText();
 			}
-		public void ClickCart() {
+		public void clickCart() {
 			driver.findElement(cart).click();
 			}
+	
 		
 		}
 		 

@@ -32,10 +32,10 @@ public class TestCase_18_viewCategory {
 		System.out.println("home page is visible successfully\n");
 	}
 	@Test(priority = 1)
-	public void Category() throws Exception {
+	public void category() throws Exception {
 		category ca = new category();
-		ca.Dashboard(driver);
-		String str = ca.Category();
+		ca.dashboard(driver);
+		String str = ca.categoryText();
 		System.out.println(str);
 		System.out.println("categories are visible on left side bar");
 		
@@ -47,18 +47,18 @@ public class TestCase_18_viewCategory {
 		Assert.assertEquals(hp, expUrl,"[**category page is not displayed **]");
 		System.out.println("category page is displayed \n");
 		
-		String str1=ca.DressProduct();
+		String str1=ca.dressProduct();
 		System.out.println(str1+"\n");
 		
 		ca.men();
-		ca.Jeans();
+		ca.jeans();
 		
 		String hp1= driver.getCurrentUrl();
 		String expUrl1="https://automationexercise.com/category_products/6";
 		Assert.assertEquals(hp1, expUrl1,"[**category page is not displayed **]");
 		System.out.println("category page is displayed\n");
 			
-		String str2=ca.MenJeans();
+		String str2=ca.menJeans();
 		System.out.println(str2+"\n");
 		}
 

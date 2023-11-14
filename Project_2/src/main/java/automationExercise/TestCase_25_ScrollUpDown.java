@@ -37,23 +37,23 @@ public class TestCase_25_ScrollUpDown {
 	}
 
 	@Test(priority = 0)
-	public void Subscription() throws Exception {
+	public void subscription() throws Exception {
 
 		TC_08_ProductDetailPage pd = new TC_08_ProductDetailPage();
-		pd.Dashboard(driver);
+		pd.dashboard(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement sub = pd.Subscription();
+		WebElement sub = pd.subscription();
 		js.executeScript("arguments[0].scrollIntoView();", sub);
 
-		boolean su = pd.Sub();
+		boolean su = pd.sub();
 		Assert.assertEquals(su, true, "[**SUBSCRIPTION is not visible **]");
 		System.out.println("SUBSCRIPTION is visible");
 
 		TC_25_26 tc = new TC_25_26();
-		tc.Dashboard(driver);
+		tc.dashboard(driver);
 		tc.scrollUp();
 
-		String str = tc.Scrooledup();
+		String str = tc.scrolledup();
 
 		if (str.contains("Full-Fledged practice website for Automation Engineers")) {
 			System.out.println("'Full-Fledged practice website for Automation Engineers' text is visible on screen\n");

@@ -18,40 +18,41 @@ public class UserLogin {
 		
 		
 		
-		public void Dashboard(WebDriver driver) {
+		public void dashboard(WebDriver driver) {
 			this.driver=driver;
 		}
 		public void clickSignup() {
 			driver.findElement(signup).click();
 			}
-		public boolean LoginActIsDisplayed() {
+		public boolean loginActIsDisplayed() {
 			return driver.findElement(login).isDisplayed();
 		}
-		public void EnterEmailId(String nm) {
+		public void enterEmailId(String nm) {
 			driver.findElement(email1).sendKeys(nm);
 		}
-		public void EnterPasswd1(String pass) {
+		public void enterPasswd1(String pass) {
 			driver.findElement(passwd1).sendKeys(pass);
 		}
-		public void ClickOnLogin() {
+		public void clickOnLogin() {
 			driver.findElement(LoginButton).click();
 		}
-		public boolean LogedInAsUserIsDisplayed() {
+		public boolean logedInAsUserIsDisplayed() {
 			return driver.findElement(LogedIn).isDisplayed();
 		}
-		public String LogedInAsUser() {
+		public String logedInAsUser() {
 			return driver.findElement(LogedIn).getText();
 		}
-		public void DeleteAcount() {
+		public void deleteAcount() {
 			driver.findElement(deleteAct).click();
 		}
-		public void ClickconDel() {
+		public void clickconDel() {
 			driver.findElement(delContinue).click();
 		}
-		public String ErrorMsg() {
+		public String errorMsg() {
 			return driver.findElement(errormsg).getText();
 		}
-		public void ClickLogOut() {
+		public void clickLogOut() {
 			driver.findElement(logOut).click();
 		}
+		
 }

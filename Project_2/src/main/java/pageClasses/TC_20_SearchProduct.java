@@ -14,13 +14,13 @@ public class TC_20_SearchProduct {
  	
  	
 
- 	public void Dashboard(WebDriver driver) {
+ 	public void dashboard(WebDriver driver) {
 		this.driver=driver;
 	}
  public void search(String name) {
 		 driver.findElement(search).sendKeys(name);
 		 }
- public void Searchbutton() {
+ public void searchbutton() {
 	 driver.findElement(searchbutton).click();
 	 }
 
@@ -28,10 +28,10 @@ public class TC_20_SearchProduct {
  public String searchResult() { 
 	 return driver.findElement(searchResult).getText(); }
 		
- public void CartProduct() {
+ public void cartProduct() {
 		 driver.findElement(CartProduct).click();
 		}
- public String Cartdiscription() {
+ public String cartdiscription() {
 	 return driver.findElement( Cartdiscription).getText();
 	}
 }

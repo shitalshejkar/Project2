@@ -40,8 +40,8 @@ public class TestCase_09_SearchProduct {
 		
 		
 		TC_08_ProductDetailPage pd=new TC_08_ProductDetailPage();
-		pd.Dashboard(driver);
-		pd.ClickProduct();
+		pd.dashboard(driver);
+		pd.clickProduct();
 		
 		String hp= driver.getCurrentUrl();
 		
@@ -50,56 +50,56 @@ public class TestCase_09_SearchProduct {
 		System.out.println("user is navigated to ALL PRODUCTS page successfully\n");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
-		WebElement pr = pd.ViewProduct();
+		WebElement pr = pd.viewProduct();
 		
 		js.executeScript("arguments[0].scrollIntoView();", pr);
 		
-		pd.ClickProduct();
+		pd.clickProduct();
 		
-		pd.SearchProduct("Blue Top");
+		pd.searchProduct("Blue Top");
 		System.out.println("products related to search are visible");
 		}
 	
 	@Test(priority = 0)
-	public void  Subscription() throws Exception {
+	public void  subscription() throws Exception {
 		
 		TC_08_ProductDetailPage pd=new TC_08_ProductDetailPage();
-		pd.Dashboard(driver);
+		pd.dashboard(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement sub = pd.Subscription();
+		WebElement sub = pd.subscription();
 		js.executeScript("arguments[0].scrollIntoView();", sub);
 		
-		boolean su =pd.Sub();
+		boolean su =pd.sub();
 		Assert.assertEquals(su,true,"[**SUBSCRIPTION is not visible **]");
 		System.out.println("SUBSCRIPTION is not visible");
 		
-		pd.EnterSubEmail("Aparnakota27@gmail.com");
-		pd.ClickSubArrow();
+		pd.enterSubEmail("Aparnakota27@gmail.com");
+		pd.clickSubArrow();
 		
-		String str = pd.SuccessMessg();
+		String str = pd.successMessg();
 		System.out.println(str);
 		}
 	
 
 @Test(priority = 0)
-public void  SubscriptionInCart() throws Exception {
+public void  subscriptionInCart() throws Exception {
 	TC_08_ProductDetailPage pd=new TC_08_ProductDetailPage();
-	pd.Dashboard(driver);
+	pd.dashboard(driver);
 	
-	pd.ClickCart();
+	pd.clickCart();
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	WebElement sub = pd.Subscription();
+	WebElement sub = pd.subscription();
 	js.executeScript("arguments[0].scrollIntoView();", sub);
 	
-	boolean su =pd.Sub();
+	boolean su =pd.sub();
 	Assert.assertEquals(su,true,"[**SUBSCRIPTION is not visible **]");
 	System.out.println("SUBSCRIPTION is not visible");
 	
-	pd.EnterSubEmail("Aparnakota27@gmail.com");
-	pd.ClickSubArrow();
+	pd.enterSubEmail("Aparnakota27@gmail.com");
+	pd.clickSubArrow();
 	
-	String str = pd.SuccessMessg();
+	String str = pd.successMessg();
 	System.out.println(str);	
 }
 @AfterMethod 

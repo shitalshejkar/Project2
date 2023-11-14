@@ -42,104 +42,104 @@ public class TestCase_15_PlaceOrder_Bc {
 	public void signUp() throws Exception {		
 
 		SignUpPage su = new SignUpPage();
-		su.Dashboard(driver);
+		su.dashboard(driver);
 		
-		su.clickSignup();
+		su.clicksignup();
 		
-		boolean signUp = su.SignupIsDisplayed();
+		boolean signUp = su.signupisdisplayed();
 		Assert.assertEquals(signUp, true, "User Signup is not displayed");
 		System.out.println("User Signup is displayed");
 		
-		su.enterUsername("Aparna");
-		su.enterEmail("Aparnakota09@gamil.com");
-		su.clickSignupButton();
+		su.enterusername("Aparna");
+		su.enteremail("Aparnakota09@gamil.com");
+		su.clicksignupButton();
 	}
 
 	@Test(priority = 2)
-	public void EnterAccountInfo() throws Exception {
+	public void enterAccountInfo() throws Exception {
 	
     EnterAccountInfo Ai= new EnterAccountInfo();
-    Ai.Dashboard(driver);
+    Ai.dashboard(driver);
 	
-    boolean Acct = Ai.EnterAccountInformationIsDisplayed();
+    boolean Acct = Ai.enterAccountInformationIsDisplayed();
 	Assert.assertEquals(Acct, true, "Enter Account Information Is not Displayed");
 	System.out.println("Enter Account Information Is Displayed");
 	
-	Ai.ClickTitle();
-	Ai.EnterPasswd("Aparnakota9");
+	Ai.clickTitle();
+	Ai.enterPasswd("Aparnakota9");
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
-	WebElement Day = Ai.EnterDay();
+	WebElement Day = Ai.enterDay();
 	Select obj = new Select(Day);
 	obj.selectByVisibleText("9");
 	js.executeScript("arguments[0].scrollIntoView();", Day );
 	
-	WebElement month = Ai.EnterMonth();
+	WebElement month = Ai.enterMonth();
 	Select obj1 = new Select(month);
 	obj1.selectByVisibleText("November");
     js.executeScript("arguments[0].scrollIntoView();", month );
 	
-	WebElement year = Ai.EnterYear();
+	WebElement year = Ai.enterYear();
 	Select obj2 = new Select(year);
 	obj2.selectByVisibleText("1994");
 	js.executeScript("arguments[0].scrollIntoView();", year );
 	
-	WebElement NL= Ai.SignUpNewsLetter();
+	WebElement NL= Ai.signUpNewsLetter();
 	js.executeScript("arguments[0].scrollIntoView();",NL );
-	Ai.ClickSignUpNewsLetter();
+	Ai.clickSignUpNewsLetter();
 	
-	WebElement SO = Ai.SpecialOffers();
+	WebElement SO = Ai.secialOffers();
 	js.executeScript("arguments[0].scrollIntoView();",SO );
-	Ai.ClickSpecialOffers();
+	Ai.clickSpecialOffers();
 	
 	WebElement FN = Ai.firstName();
 	js.executeScript("arguments[0].scrollIntoView();",FN );
-	Ai.EnterfirstName("Aparna");
+	Ai.enterfirstName("Aparna");
 	
 	WebElement LN = Ai.lastName();
 	js.executeScript("arguments[0].scrollIntoView();",LN );
-	Ai.EnterlastName("Kota");
+	Ai.enterlastName("Kota");
 	
-	Ai.EntercompanyName("EXCLR");
-	Ai.EnterAddress1("Pune");
-	Ai.EnterAddress2("Hyderabad");
+	Ai.entercompanyName("EXCLR");
+	Ai.enterAddress1("Pune");
+	Ai.enterAddress2("Hyderabad");
 	
-	WebElement country = Ai.ClickCountry();
+	WebElement country = Ai.clickCountry();
 	Select obj3 = new Select(country);
 	obj3.selectByVisibleText("India");
 	
-	Ai.EnterState("Maharashtra");
-	Ai.EnterCity("Pune");
-	Ai.EnterZipCode("411031");
-	Ai.EnterMobileNo("9763229961");
-	Ai.ClickCreateAccount();
+	Ai.enterState("Maharashtra");
+	Ai.enterCity("Pune");
+	Ai.enterZipCode("411031");
+	Ai.enterMobileNo("9763229961");
+	Ai.clickCreateAccount();
 	
 	String AC= driver.getCurrentUrl();
 	String expUrl1="https://automationexercise.com/account_created";
 	Assert.assertEquals(AC, expUrl1,"[**'ACCOUNT CREATED!' is not visible**]");
 	System.out.println("'ACCOUNT CREATED!' is visible\n");
 	
-	Ai.ClickContinue();
+	Ai.clickContinue();
 	
-	boolean LU = Ai.LogedInAsUserIsDisplayed();
+	boolean LU = Ai.logedInAsUserIsDisplayed();
 	Assert.assertEquals(LU,true,"[**'Logged in as username' is not visible**]");
 	System.out.println("'Logged in as username'is visible\n");
 	
-	String str = Ai.LogedInAsUser();
+	String str = Ai.logedInAsUser();
 	System.out.println(str);
 	
 	}
 	
 	@Test(priority = 3)
-	public void Product() throws Exception {
+	public void product() throws Exception {
 		
 		TC_14_PlaceOrder po =new TC_14_PlaceOrder();
-		po.Dashboard(driver);
-		po.CickProduct();
+		po.dashboard(driver);
+		po.clickProduct();
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement p1= po.AddtoCart1();
+		WebElement p1= po.addtoCart1();
 		js.executeScript("arguments[0].scrollIntoView();", p1);
 		
 		Actions act = new Actions(driver);
@@ -150,35 +150,35 @@ public class TestCase_15_PlaceOrder_Bc {
 		Assert.assertEquals(hp, expUrl,"[**user is not navigated to ALL PRODUCTS page**]");
 		System.out.println("user is navigated to ALL PRODUCTS page successfully\n");
 		
-		po.ClickAddtoCart();
-		po.ViewCart();
+		po.clickAddtoCart();
+		po.viewCart();
 		
 		String AD= driver.getCurrentUrl();
 		String expUrl2="https://automationexercise.com/view_cart";
 		Assert.assertEquals(AD, expUrl2,"[** cart page is not displayed **]");
 		System.out.println("cart page is displayed");
 		
-		po.ProceedToCart();
-		po.Register_Login();
+		po.proceedToCart();
+		po.register_Login();
 		
 	}
 	@Test(priority = 4)
-	public void Cart() throws Exception {
+	public void cart() throws Exception {
 		
 		TC_14_PlaceOrder po =new TC_14_PlaceOrder();
-		po.Dashboard(driver);
+		po.dashboard(driver);
 		
 		po.cart();
-		po.ProceedToCart();
+		po.proceedToCart();
 		
-		String BillingAdd =po.BillingAdd();
+		String BillingAdd =po.billingAdd();
 		System.out.println(BillingAdd);
-		String DeliveryAdd = po.DeliveryAdd();
+		String DeliveryAdd = po.deliveryAdd();
 		System.out.println(DeliveryAdd);
 		
-		String CartInfo =po.CartInfo();
+		String CartInfo =po.cartInfo();
 		System.out.println(CartInfo);
-		po.Comment("xyzproduct");
+		po.comment("xyzproduct");
 		po.placeOrder();
 		
 		po.nameOncard("Aparna");
@@ -186,7 +186,7 @@ public class TestCase_15_PlaceOrder_Bc {
 		po.cvc("311");
 		po.expiry_month("09");
 		po.expiry_year("2027");
-		po.Pay_submit();
+		po.pay_submit();
 		
 		String successMsg = po.successMsg();
 		System.out.println(successMsg);
@@ -199,7 +199,7 @@ public class TestCase_15_PlaceOrder_Bc {
 		System.out.println(" 'ACCOUNT DELETED!' is visible\n");
 		System.out.println("Your account has been permanently deleted!");
 		
-		po.Continue();
+		po.continued();
 		}
 @AfterMethod
 public void closeApp() {

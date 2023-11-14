@@ -32,99 +32,100 @@ public class EnterAccountInfo {
 	By deleteAct= By.xpath("//*[text()=' Delete Account']");
 	By delContinue = By.xpath("//*[text()='Continue']");
 	
-	public void Dashboard(WebDriver driver) {
+	public void dashboard(WebDriver driver) {
 		this.driver=driver;
 	}
-	public boolean EnterAccountInformationIsDisplayed() {
+	public boolean enterAccountInformationIsDisplayed() {
 		return driver.findElement(AcInfo).isDisplayed();
 	}
-	public void ClickTitle() {
+	public void clickTitle() {
 		driver.findElement(Title).click();;
 	}
-	public void EnterPasswd(String pass) {
+	public void enterPasswd(String pass) {
 		driver.findElement(passwd).sendKeys(pass);;
 	}
-	public WebElement EnterDay() {
+	public WebElement enterDay() {
 		return driver.findElement(day);
 		
 	}
-	public WebElement EnterMonth() {
+	public WebElement enterMonth() {
 		return driver.findElement(month);
 	}
-	public WebElement EnterYear() {
+	public WebElement enterYear() {
 		return driver.findElement(year);
 	}
-	public WebElement SignUpNewsLetter() {
+	public WebElement signUpNewsLetter() {
 		return driver.findElement(SignUpNewsLetter);
 	}
-	public void ClickSignUpNewsLetter() {
+	public void clickSignUpNewsLetter() {
 		driver.findElement(SignUpNewsLetter).click();
 	}
-	public WebElement SpecialOffers() {
+	public WebElement secialOffers() {
 		return driver.findElement(SpecialOffers);
 	}
-	public void ClickSpecialOffers() {
+	public void clickSpecialOffers() {
 		driver.findElement(SpecialOffers).click();
 	}
 	public WebElement firstName() {
 		return driver.findElement(firstName);
 	}
-	public void EnterfirstName(String FName) {
+	public void enterfirstName(String FName) {
 		driver.findElement(firstName).sendKeys(FName);
 	}
 	public WebElement lastName() {
 		return driver.findElement(lastName);
 	}
-	public void EnterlastName(String Lname) {
+	public void enterlastName(String Lname) {
 		driver.findElement(lastName).sendKeys(Lname);
 	}
-	public void EntercompanyName(String CompanyName) {
+	public void entercompanyName(String CompanyName) {
 		driver.findElement(companyName).sendKeys(CompanyName);
 	}
-	public void EnterAddress1(String Add1) {
+	public void enterAddress1(String Add1) {
 		driver.findElement(Address1).sendKeys(Add1);
 	}
-	public void EnterAddress2(String Add2) {
+	public void enterAddress2(String Add2) {
 		driver.findElement(Address2).sendKeys(Add2);
 	}
 
-public String EnterAddressGetText() {
+public String enterAddressGetText() {
 	return driver.findElement(Address1).getText();
 }
-public String EnterAddressGetText2() {
+public String enterAddressGetText2() {
 	return driver.findElement(Address2).getText();
 }
-	public WebElement ClickCountry() {
+	public WebElement clickCountry() {
 		return driver.findElement(Country);
 	}
-	public void EnterState(String state) {
+	public void enterState(String state) {
 		driver.findElement(State).sendKeys(state);
 	}
-	public void EnterCity(String city) {
+	public void enterCity(String city) {
 		driver.findElement(City).sendKeys(city);
 	}
-	public void EnterZipCode(String zipCode) {
+	public void enterZipCode(String zipCode) {
 		driver.findElement(ZipCode).sendKeys(zipCode);
 	}
-	public void EnterMobileNo(String mobNo) {
+	public void enterMobileNo(String mobNo) {
 		driver.findElement(MobNo).sendKeys(mobNo);
 	}
-	public void ClickCreateAccount() {
+	public void clickCreateAccount() {
 		driver.findElement(CreateAccount).click();
 	}
-	public void ClickContinue() {
+	public void clickContinue() {
 		driver.findElement(Continue).click();
 	}
-	public boolean LogedInAsUserIsDisplayed() {
+	public boolean logedInAsUserIsDisplayed() {
 		return driver.findElement(LogedIn).isDisplayed();
 	}
-	public String LogedInAsUser() {
+	public String logedInAsUser() {
 		return driver.findElement(LogedIn).getText();
 	}
-	public void DeleteAcount() {
+	public void deleteAcount() {
 		driver.findElement(deleteAct).click();
 	}
-	public void ClickconDel() {
+	public void clickconDel() {
 		driver.findElement(delContinue).click();
 	}
+	
 }

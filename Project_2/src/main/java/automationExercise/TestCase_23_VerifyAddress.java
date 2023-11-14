@@ -43,104 +43,104 @@ public void m() {
 public void signUp() throws Exception {
 
 	SignUpPage obj1= new SignUpPage();
-	obj1.Dashboard(driver);
+	obj1.dashboard(driver);
 	
-	obj1.clickSignup();
+	obj1.clicksignup();
 	
-	boolean signup = obj1.SignupIsDisplayed();
+	boolean signup = obj1.signupisdisplayed();
 	Assert.assertEquals(signup, true,"SignUpIsNotVisible");
 	System.out.println("'New User Signup!' is visible\n");
 	
-	obj1.enterUsername("Aparna");
-	obj1.enterEmail("Aparnakota9@gmail.com");
-	obj1.clickSignupButton();
+	obj1.enterusername("Aparna");
+	obj1.enteremail("Aparnakota9@gmail.com");
+	obj1.clicksignupButton();
 	System.out.println("User SignedUp Successfully");
    
 }
 @Test(priority = 1)
-public void EnterActInfo() throws Exception {
+public void enterActInfo() throws Exception {
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	EnterAccountInfo AI= new EnterAccountInfo();
-	AI.Dashboard(driver);
+	AI.dashboard(driver);
 	
-	boolean EAI = AI.EnterAccountInformationIsDisplayed();
+	boolean EAI = AI.enterAccountInformationIsDisplayed();
 	Assert.assertEquals(EAI, true,"[**EnterAccountInformationIsNotVisible**]");
 	System.out.println("'ENTER ACCOUNT INFORMATION' is visible\n");
 	
-	AI.ClickTitle();
+	AI.clickTitle();
 	
-	AI.EnterPasswd("Aparnakota9");
+	AI.enterPasswd("Aparnakota9");
 	
-	WebElement Day = AI.EnterDay();
+	WebElement Day = AI.enterDay();
 	Select obj = new Select(Day);
 	obj.selectByVisibleText("9");
 	js.executeScript("arguments[0].scrollIntoView();", Day );
 	
-	WebElement month = AI.EnterMonth();
+	WebElement month = AI.enterMonth();
 	Select obj1 = new Select(month);
 	obj1.selectByVisibleText("November");
     js.executeScript("arguments[0].scrollIntoView();", month );
 	
-	WebElement year = AI.EnterYear();
+	WebElement year = AI.enterYear();
 	Select obj2 = new Select(year);
 	obj2.selectByVisibleText("1994");
 	js.executeScript("arguments[0].scrollIntoView();", year );
 	
-	WebElement NL= AI.SignUpNewsLetter();
+	WebElement NL= AI.signUpNewsLetter();
 	js.executeScript("arguments[0].scrollIntoView();",NL );
-	AI.ClickSignUpNewsLetter();
+	AI.clickSignUpNewsLetter();
 	
-	WebElement SO = AI.SpecialOffers();
+	WebElement SO = AI.secialOffers();
 	js.executeScript("arguments[0].scrollIntoView();",SO );
-	AI.ClickSpecialOffers();
+	AI.clickSpecialOffers();
 	
 	WebElement FN = AI.firstName();
 	js.executeScript("arguments[0].scrollIntoView();",FN );
-	AI.EnterfirstName("Aparna");
+	AI.enterfirstName("Aparna");
 	
 	WebElement LN = AI.lastName();
 	js.executeScript("arguments[0].scrollIntoView();",LN );
-	AI.EnterlastName("Kota");
+	AI.enterlastName("Kota");
 	
-	AI.EntercompanyName("EXCLR");
-	AI.EnterAddress1("Pune");
-	AI.EnterAddress2("Hyderabad");
+	AI.entercompanyName("EXCLR");
+	AI.enterAddress1("Pune");
+	AI.enterAddress2("Hyderabad");
 	
-	WebElement country = AI.ClickCountry();
+	WebElement country = AI.clickCountry();
 	Select obj3 = new Select(country);
 	obj3.selectByVisibleText("India");
 	
-	AI.EnterState("Maharashtra");
-	AI.EnterCity("Pune");
-	AI.EnterZipCode("411031");
-	AI.EnterMobileNo("9763229961");
-	AI.ClickCreateAccount();
+	AI.enterState("Maharashtra");
+	AI.enterCity("Pune");
+	AI.enterZipCode("411031");
+	AI.enterMobileNo("9763229961");
+	AI.clickCreateAccount();
 	
 	String AC= driver.getCurrentUrl();
 	String expUrl1="https://automationexercise.com/account_created";
 	Assert.assertEquals(AC, expUrl1,"[**'ACCOUNT CREATED!' is not visible**]");
 	System.out.println("'ACCOUNT CREATED!' is visible\n");
 	
-	AI.ClickContinue();
+	AI.clickContinue();
 	
-	boolean LU = AI.LogedInAsUserIsDisplayed();
+	boolean LU = AI.logedInAsUserIsDisplayed();
 	Assert.assertEquals(LU,true,"[**'Logged in as username' is not visible**]");
 	System.out.println("'Logged in as username'is visible\n");
 	
-	String str = AI.LogedInAsUser();
+	String str = AI.logedInAsUser();
 	System.out.println(str);
 }
 
 @Test(priority = 1)
-public void Product() throws Exception {
+public void product() throws Exception {
 
 	TC_14_PlaceOrder po = new TC_14_PlaceOrder();
-	po.Dashboard(driver);
-	po.CickProduct();
+	po.dashboard(driver);
+	po.clickProduct();
 
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	WebElement p1 = po.AddtoCart1();
+	WebElement p1 = po.addtoCart1();
 	js.executeScript("arguments[0].scrollIntoView();", p1);
 
 	Actions act = new Actions(driver);
@@ -151,24 +151,24 @@ public void Product() throws Exception {
 	Assert.assertEquals(hp, expUrl, "[**user is not navigated to ALL PRODUCTS page**]");
 	System.out.println("user is navigated to ALL PRODUCTS page successfully\n");
 
-	po.ClickAddtoCart();
-	po.ViewCart();
+	po.clickAddtoCart();
+	po.viewCart();
 	String AD = driver.getCurrentUrl();
 	String expUrl2 = "https://automationexercise.com/view_cart";
 	Assert.assertEquals(AD, expUrl2, "[** cart page is not displayed **]");
 	System.out.println("cart page is displayed");
 
-	po.ProceedToCart();
+	po.proceedToCart();
 
-	String BillingAdd = po.BillingAdd();
+	String BillingAdd = po.billingAdd();
 	System.out.println(BillingAdd);
-	String DeliveryAdd = po.DeliveryAdd();
+	String DeliveryAdd = po.deliveryAdd();
 	System.out.println(DeliveryAdd);
 
 	EnterAccountInfo AI = new EnterAccountInfo();
-	AI.Dashboard(driver);
-	String Address1 = AI.EnterAddressGetText();
-	String Address2 = AI.EnterAddressGetText2();
+	AI.dashboard(driver);
+	String Address1 = AI.enterAddressGetText();
+	String Address2 = AI.enterAddressGetText2();
 
 	boolean add = BillingAdd.contains(Address1);
 	boolean add1 = BillingAdd.contains(Address2);
@@ -182,13 +182,13 @@ public void Product() throws Exception {
 	Assert.assertEquals(add3, true);
 	System.out.println(" billing address is same address filled at the time registration of account");
 
-	AI.DeleteAcount();
+	AI.deleteAcount();
 	String AD1 = driver.getCurrentUrl();
 	String expUrl23 = "https://automationexercise.com/delete_account";
 	Assert.assertEquals(AD1, expUrl23, "[** 'ACCOUNT DELETED!' is not visible**]");
 	System.out.println(" 'ACCOUNT DELETED!' is visible\n");
 
-	AI.ClickconDel();
+	AI.clickconDel();
       
 }
 @AfterMethod 

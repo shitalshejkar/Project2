@@ -37,119 +37,119 @@ public class LoginUser {
 		System.out.println("home page is visible successfully\n");
 	}
 	@Test(priority = 0)
-	public void SignIN() throws Exception {
+	public void signIN() throws Exception {
 		
 		SignUpPage obj_1= new SignUpPage();
-		obj_1.Dashboard(driver);
-		obj_1.clickSignup();
-		obj_1.enterUsername("Aparna");
-		obj_1.enterEmail("Aparnakota9@gmail.com");
-		obj_1.clickSignupButton();
+		obj_1.dashboard(driver);;
+		obj_1.clicksignup();
+		obj_1.enterusername("Aparna");
+		obj_1.enteremail("Aparnakota9@gmail.com");
+		obj_1.clicksignupButton();
 		
 		EnterAccountInfo AI= new EnterAccountInfo();
-		AI.Dashboard(driver);
-		AI.ClickTitle();
-		AI.EnterPasswd("Aparnakota9");	
-		WebElement Day = AI.EnterDay();
+		AI.dashboard(driver);;
+		AI.clickTitle();
+		AI.enterPasswd("Aparnakota9");	
+		WebElement Day = AI.enterDay();
 		Select obj = new Select(Day);
 		obj.selectByVisibleText("9");
-		WebElement month = AI.EnterMonth();
+		WebElement month = AI.enterMonth();
 		Select obj1 = new Select(month);
 		obj1.selectByVisibleText("November");
-		WebElement year = AI.EnterYear();
+		WebElement year = AI.enterYear();
 		Select obj2 = new Select(year);
 		obj2.selectByVisibleText("1994");
-		AI.ClickSignUpNewsLetter();
-		AI.ClickSpecialOffers();
-		AI.EnterfirstName("Aparna");
-		AI.EnterlastName("Kota");
-		AI.EntercompanyName("EXCLR");
-		AI.EnterAddress1("Pune");
-		AI.EnterAddress2("Hyderabad");
-		WebElement country = AI.ClickCountry();
+		AI.clickSignUpNewsLetter();
+		AI.clickSpecialOffers();
+		AI.enterfirstName("Aparna");
+		AI.enterlastName("Kota");
+		AI.entercompanyName("EXCLR");
+		AI.enterAddress1("Pune");
+		AI.enterAddress2("Hyderabad");
+		WebElement country = AI.clickCountry();
 		Select obj3 = new Select(country);
 		obj3.selectByVisibleText("India");
-		AI.EnterState("Maharashtra");
-		AI.EnterCity("Pune");
-		AI.EnterZipCode("411031");
-		AI.EnterMobileNo("9763229961");
-		AI.ClickCreateAccount();
-		AI.ClickContinue();
+		AI.enterState("Maharashtra");
+		AI.enterCity("Pune");
+		AI.enterZipCode("411031");
+		AI.enterMobileNo("9763229961");
+		AI.clickCreateAccount();
+		AI.clickContinue();
 		
 		
 	}
 	
 	@Test(priority = 1)
-	public void Login() throws Exception {
+	public void login() throws Exception {
 
     UserLogin obj1= new UserLogin();
-		obj1.Dashboard(driver);
+		obj1.dashboard(driver);;
 		
 		obj1.clickSignup();
-	boolean Login = obj1.LoginActIsDisplayed();
+	boolean Login = obj1.loginActIsDisplayed();
 		Assert.assertEquals(Login, true,"'Login to your account' is not visible");
 		System.out.println("'Login to your account' is visible");
 		
-		obj1.EnterEmailId("Aparnakota9@gmail.com");
-	    obj1.EnterPasswd1("Aparnakota9");
-	    obj1.ClickOnLogin();
+		obj1.enterEmailId("Aparnakota9@gmail.com");
+	    obj1.enterPasswd1("Aparnakota9");
+	    obj1.clickOnLogin();
 	   
-	boolean LU = obj1.LogedInAsUserIsDisplayed();
+	boolean LU = obj1.logedInAsUserIsDisplayed();
 		Assert.assertEquals(LU,true,"[**'Logged in as username' is not visible**]");
 		System.out.println("'Logged in as username'is visible\n");
 		
-		String str = obj1.LogedInAsUser();
+		String str = obj1.logedInAsUser();
 		System.out.println(str);
 		
-	    obj1.DeleteAcount();
+	    obj1.deleteAcount();
 		String AD= driver.getCurrentUrl();
 		String expUrl2="https://automationexercise.com/delete_account";
 		Assert.assertEquals(AD, expUrl2,"[** 'ACCOUNT DELETED!' is not visible**]");
 		System.out.println(" 'ACCOUNT DELETED!' is visible\n");
 		
-		obj1.ClickconDel();
+		obj1.clickconDel();
 	}
 	@Test(priority = 2)
-	public void LoginWithWrongPass() throws Exception {
+	public void loginWithWrongPass() throws Exception {
 
     UserLogin obj1= new UserLogin();
-		obj1.Dashboard(driver);
+		obj1.dashboard(driver);
 		
 		obj1.clickSignup();
-	boolean Login = obj1.LoginActIsDisplayed();
+	boolean Login = obj1.loginActIsDisplayed();
 		Assert.assertEquals(Login, true,"'Login to your account' is not visible");
 		System.out.println("'Login to your account' is visible\n");
 		
-		obj1.EnterEmailId("Aparnakota27@gmail.com");
-	    obj1.EnterPasswd1("Aparnakota19");
-	    obj1.ClickOnLogin();
-	    String error = obj1.ErrorMsg();
+		obj1.enterEmailId("Aparnakota27@gmail.com");
+	    obj1.enterPasswd1("Aparnakota19");
+	    obj1.clickOnLogin();
+	    String error = obj1.errorMsg();
 	    System.out.println(error+"\n");
 }
 	@Test(priority = 3)
-	public void ForLoggingOUT() throws Exception {
+	public void forLoggingOUT() throws Exception {
 
 		UserLogin obj1 = new UserLogin();
-		obj1.Dashboard(driver);
+		obj1.dashboard(driver);
 
 		obj1.clickSignup();
 		
-		boolean Login = obj1.LoginActIsDisplayed();
+		boolean Login = obj1.loginActIsDisplayed();
 		Assert.assertEquals(Login, true, "'Login to your account' is not visible");
 		System.out.println("'Login to your account' is visible\n");
 
-		obj1.EnterEmailId("Aparnakota27@gmail.com");
-		obj1.EnterPasswd1("Aparnakota9");
-		obj1.ClickOnLogin();
+		obj1.enterEmailId("Aparnakota27@gmail.com");
+		obj1.enterPasswd1("Aparnakota9");
+		obj1.clickOnLogin();
 		
-		boolean LU = obj1.LogedInAsUserIsDisplayed();
+		boolean LU = obj1.logedInAsUserIsDisplayed();
 		Assert.assertEquals(LU, true, "[**'Logged in as username' is not visible**]");
 		System.out.println("'Logged in as username'is visible\n");
 
-		String str = obj1.LogedInAsUser();
+		String str = obj1.logedInAsUser();
 		System.out.println(str);
 
-		obj1.ClickLogOut();
+		obj1.clickLogOut();
 		
 		String hp = driver.getCurrentUrl();
 		String expUrl = "https://automationexercise.com/login";
@@ -161,14 +161,14 @@ public class LoginUser {
 	public void signExistingUser() throws Exception {
 		
 	    SignUpPage obj_1= new SignUpPage();
-		obj_1.Dashboard(driver);
+		obj_1.dashboard(driver);
 		
-		obj_1.clickSignup();
-		obj_1.enterUsername("Aparna");
-		obj_1.enterEmail("Aparnakota27@gmail.com");
-		obj_1.clickSignupButton();
+		obj_1.clicksignup();
+		obj_1.enterusername("Aparna");
+		obj_1.enteremail("Aparnakota27@gmail.com");
+		obj_1.clicksignupButton();
 		
-		String error = obj_1.ErrorMsg();
+		String error = obj_1.errormsg();
 	    System.out.println(error+"\n");
 		}
 

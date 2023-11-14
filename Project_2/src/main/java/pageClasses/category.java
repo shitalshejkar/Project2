@@ -13,10 +13,10 @@ public class category {
 	 	By jeans = By.xpath("//*[text()='Jeans ']");
 	 	By MenJeans = By.xpath("//*[text()='Men - Jeans Products']");
 	 	
-	 	public void Dashboard(WebDriver driver) {
+	 	public void dashboard(WebDriver driver) {
 			this.driver=driver;
 		}
-	 public String Category() {
+	 public String categoryText() {
 			return driver.findElement(category).getText();
 			}
 	 public void women() {
@@ -25,16 +25,17 @@ public class category {
 	 public void dress() {
 		   driver.findElement(dress).click();
 		}
-	 public String DressProduct() {
+	 public String dressProduct() {
 			return driver.findElement(DressProduct).getText();
 			}
 	 public void men() {
 		   driver.findElement(men).click();
 		}
-     public void Jeans() {
+     public void jeans() {
 	        driver.findElement(jeans).click();
 	}
-     public String MenJeans() {
+     public String menJeans() {
 			return driver.findElement(MenJeans).getText();
 			}
+	
 }

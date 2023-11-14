@@ -33,7 +33,7 @@ public class TestCase_07_TestcasePage {
 		System.out.println("home page is visible successfully\n");
 	}
 	@Test(priority = 0)
-	public void TestCasepage() throws Exception {
+	public void testCasepage() throws Exception {
 		
 	WebElement TestcaseLink = driver.findElement(By.xpath("//*[text()=' Test Cases']"));
 	TestcaseLink.click();
