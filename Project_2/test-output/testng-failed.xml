@@ -3,13 +3,167 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="automationExercise.TestCase_16_PlaceOrder_LoginBc">
+        <methods>
+          <include name="cart"/>
+          <include name="login"/>
+          <include name="m"/>
+          <include name="closeApp"/>
+          <include name="product"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_16_PlaceOrder_LoginBc -->
+      <class name="automationExercise.TestCase_21_AddReview">
+        <methods>
+          <include name="closeApp"/>
+          <include name="m"/>
+          <include name="productReview"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_21_AddReview -->
+      <class name="automationExercise.LoginUser">
+        <methods>
+          <include name="signIN"/>
+          <include name="loginWithWrongPass"/>
+          <include name="signExistingUser"/>
+          <include name="m"/>
+          <include name="closeApp"/>
+          <include name="forLoggingOUT"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- automationExercise.LoginUser -->
+      <class name="automationExercise.TestCase_20_SearchProducts">
+        <methods>
+          <include name="productDetails"/>
+          <include name="closeApp"/>
+          <include name="m"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_20_SearchProducts -->
+      <class name="automationExercise.TestCase_07_TestcasePage">
+        <methods>
+          <include name="m"/>
+          <include name="closeApp"/>
+          <include name="testCasepage"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_07_TestcasePage -->
+      <class name="automationExercise.TestCase_22_AddToCart">
+        <methods>
+          <include name="closeApp"/>
+          <include name="m"/>
+          <include name="addtoCart"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_22_AddToCart -->
+      <class name="automationExercise.TestCase_18_viewCategory">
+        <methods>
+          <include name="m"/>
+          <include name="closeApp"/>
+          <include name="category"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_18_viewCategory -->
+      <class name="automationExercise.SignUp">
+        <methods>
+          <include name="closeApp"/>
+          <include name="enterActInfo"/>
+          <include name="signUp"/>
+          <include name="m"/>
+        </methods>
+      </class> <!-- automationExercise.SignUp -->
+      <class name="automationExercise.TestCase_24_DownloadInvoice">
+        <methods>
+          <include name="closeApp"/>
+          <include name="signUp"/>
+          <include name="cart"/>
+          <include name="m"/>
+          <include name="product"/>
+          <include name="enterAccountInfo"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_24_DownloadInvoice -->
+      <class name="automationExercise.ContactUsForm">
+        <methods>
+          <include name="m"/>
+          <include name="closeApp"/>
+          <include name="signin"/>
+        </methods>
+      </class> <!-- automationExercise.ContactUsForm -->
+      <class name="automationExercise.TestCase_19_ViewBrand">
+        <methods>
+          <include name="closeApp"/>
+          <include name="product"/>
+          <include name="m"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_19_ViewBrand -->
+      <class name="automationExercise.TestCase_08_ProductDetail">
+        <methods>
+          <include name="m"/>
+          <include name="closeApp"/>
+          <include name="productDetails"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_08_ProductDetail -->
+      <class name="automationExercise.TestCase_23_VerifyAddress">
+        <methods>
+          <include name="product"/>
+          <include name="m"/>
+          <include name="signUp"/>
+          <include name="enterActInfo"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_23_VerifyAddress -->
+      <class name="automationExercise.TestCase_25_ScrollUpDown">
+        <methods>
+          <include name="closeApp"/>
+          <include name="subscription"/>
+          <include name="m"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_25_ScrollUpDown -->
+      <class name="automationExercise.TestCase_17_RemoveProducts">
+        <methods>
+          <include name="product"/>
+          <include name="m"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_17_RemoveProducts -->
       <class name="automationExercise.TestCase_26_ScrollUpwithoutarrow">
         <methods>
           <include name="m"/>
-          <include name="ScrollUp"/>
+          <include name="scrollUp"/>
           <include name="closeApp"/>
         </methods>
       </class> <!-- automationExercise.TestCase_26_ScrollUpwithoutarrow -->
+      <class name="automationExercise.TestCase_14_PlaceOrder_wc">
+        <methods>
+          <include name="enterAccountInfo"/>
+          <include name="product"/>
+          <include name="signUp"/>
+          <include name="m"/>
+          <include name="cart"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_14_PlaceOrder_wc -->
+      <class name="automationExercise.TestCase_15_PlaceOrder_Bc">
+        <methods>
+          <include name="product"/>
+          <include name="enterAccountInfo"/>
+          <include name="cart"/>
+          <include name="closeApp"/>
+          <include name="signUp"/>
+          <include name="m"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_15_PlaceOrder_Bc -->
+      <class name="automationExercise.TestCase_12_Cart">
+        <methods>
+          <include name="closeApp"/>
+          <include name="productDetail"/>
+          <include name="m"/>
+          <include name="product"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_12_Cart -->
+      <class name="automationExercise.TestCase_09_SearchProduct">
+        <methods>
+          <include name="ProductDetails"/>
+          <include name="subscriptionInCart"/>
+          <include name="subscription"/>
+          <include name="closeApp"/>
+          <include name="m"/>
+        </methods>
+      </class> <!-- automationExercise.TestCase_09_SearchProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
